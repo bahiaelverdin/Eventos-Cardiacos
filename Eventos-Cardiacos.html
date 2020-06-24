@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="author" content="Autores: Catalina Mendizabal, Josefina Arcagni, Lucía Khabie y Bahía Elverdin" />
+
+<meta name="date" content="2020-06-18" />
+
+<title>Predicción de Eventos Cardíacos</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
+<script src="site_libs/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
+<link href="site_libs/clean-0.1/clean.css" rel="stylesheet" />
+<script src="site_libs/clean-0.1/clean.js"></script>
+
+
+
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("toc");
+});
+</script>
+
+<!-- code folding -->
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+<div class="container-fluid main-container">
+  <div class="row">
+     <div class="col-md-10">
+
+
+
+
+<div id="header">
+<h1 class="title">Predicción de Eventos Cardíacos</h1>
+<h4 class="author"><em>Autores: Catalina Mendizabal, Josefina Arcagni, Lucía Khabie y Bahía Elverdin</em></h4>
+<h4 class="date"><em>2020-06-18</em></h4>
+</div>
+
+<div id="content">
+<div id="introducción" class="section level1 unnumbered">
+<h1>Introducción</h1>
+<p>       Hemos realizado un análisis de la prevalencia de los factores de riesgo como elementos esenciales para la decisión sobre tipo de tratamiento hospitalario de los eventos cardiovasculares.</p>
+<p>       Utilizamos como base para este análisis un dataset conteniendo los datos ya curados de internación de 1000 pacientes del Hospital Universitario Austral.</p>
+<p>       Nuestro estudio se divide en dos partes; la primera partiendo de los pacientes que sufrieron un evento cardiovascular, y la segunda parte considera a todos los pacientes admitidos a la guardia.</p>
+</div>
+<div id="análisis" class="section level1 unnumbered">
+<h1>Análisis</h1>
+<div id="pacientes-que-sufrieron-un-evento-cardiovascular" class="section level2 unnumbered">
+<h2>Pacientes que sufrieron un evento cardiovascular</h2>
+<p>       Un evento cardíaco se refiere a todo tipo de <strong>eventos coronarios</strong> de diversas etiologías. Todos los pacientes que tuvieron eventos coronarios tienen una <strong>edad superior a los 30 años</strong>. De los 121 pacientes que sufrieron un evento cardíaco <strong>97 son hombres y 24 son mujeres</strong>.</p>
+<table class="table table-striped" style="width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Evento
+</th>
+<th style="text-align:right;">
+Cantidad
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:right;">
+881
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+121
+</td>
+</tr>
+</tbody>
+</table>
+<div id="edades-y-género" class="section level3 unnumbered">
+<h3>Edades y Género</h3>
+<p><img src="Eventos-Cardiacos_files/figure-html/ages-1.png" /><!-- --></p>
+<p>El gráfico representa la <strong>densidad de pacientes de cada edad</strong>, separados por genero, que presentan un evento cardíaco. El intervalo de edad con <strong>mayor cantidad de pacientes</strong> internados para ambos géneros se presenta entre los <strong>65 y 70 años</strong>.</p>
+</div>
+<div id="diabetes-y-género" class="section level3 unnumbered">
+<h3>Diabetes y Género</h3>
+<p><img src="Eventos-Cardiacos_files/figure-html/diabetes-1.png" /><!-- --></p>
+<p>El gráfico separa unitariamente la cantidad de mujeres y hombres con diabetes, y cantidad de hombres y mujeres sin diabetes que sufrieron un evento cardíaco. Podemos observar que de los pacientes con diabetes, pocas mujeres sufrieron este evento. Por contrario, de <strong>los hombres con evento podemos notar que una porción más grande sufre de diabetes</strong>.</p>
+</div>
+<div id="antecedentes-familiares-y-cantidad-de-episodios" class="section level3 unnumbered">
+<h3>Antecedentes Familiares y Cantidad de Episodios</h3>
+<p><img src="Eventos-Cardiacos_files/figure-html/AHF-1.png" /><!-- --></p>
+<p>Pudimos deducir que de los pacientes que presenciaron uno o más eventos cardiovasculares, solo una <strong>pequeña cantidad de ellos tenían antecedentes familiares</strong>. Consecuentemente, podemos asumir en base a los datos que se nos entregaron, que los antecedentes familiares pueden <strong>no ser considerado un factor de riesgo significativo para el paciente</strong>.</p>
+</div>
+<div id="características-y-ubicación-del-dolor" class="section level3 unnumbered">
+<h3>Características y Ubicación del Dolor</h3>
+<p>Los siguientes gráficos separan el <strong>tipo de dolor y en cuántos lugares del cuerpo este se presentó</strong>.</p>
+<div id="section" class="section level4 tabset tabset-fade tabset-pills unnumbered">
+<h4></h4>
+<div id="dolor-de-puntada-quemazón-o-acidez" class="section level5 unnumbered unnumbered">
+<h5>Dolor de puntada, quemazón o acidez</h5>
+<p><img src="Eventos-Cardiacos_files/figure-html/dolor-1.png" /><!-- --></p>
+<p>Podemos notar que la mayoría de los pacientes sufrieron <strong>dolor opresivo en uno o más lugares del cuerpo</strong>. Otra cantidad significante de pacientes sufrió un dolor de puntada, quemazón o acidez. Una <strong>cantidad menor de pacientes sufrió otro tipo de dolor</strong>.</p>
+</div>
+<div id="dolor-opresivo" class="section level5 unnumbered unnumbered">
+<h5>Dolor Opresivo</h5>
+<p><img src="Eventos-Cardiacos_files/figure-html/dolor3-1.png" /><!-- --></p>
+<p>Podemos notar que la mayoría de los pacientes sufrieron <strong>dolor opresivo en uno o más lugares del cuerpo</strong>. Otra cantidad significante de pacientes sufrió un dolor de puntada, quemazón o acidez. Una <strong>cantidad menor de pacientes sufrió otro tipo de dolor</strong>.</p>
+</div>
+<div id="otro-dolor" class="section level5 unnumbered unnumbered">
+<h5>Otro dolor</h5>
+<p><img src="Eventos-Cardiacos_files/figure-html/dolor2-1.png" /><!-- --></p>
+<p>Podemos notar que la mayoría de los pacientes sufrieron <strong>dolor opresivo en uno o más lugares del cuerpo</strong>. Otra cantidad significante de pacientes sufrió un dolor de puntada, quemazón o acidez. Una <strong>cantidad menor de pacientes sufrió otro tipo de dolor</strong>.</p>
+</div>
+<div id="section-1" class="section level5 unnumbered unnumbered">
+<h5></h5>
+</div>
+</div>
+</div>
+</div>
+<div id="pacientes-atendidos-en-la-guardia-con-posible-evento-cardiovascular" class="section level2 unnumbered">
+<h2>Pacientes atendidos en la guardia con posible evento cardiovascular</h2>
+<p>Ingresaron <strong>1000 pacientes en la guardia del Hospital Austral</strong> con sospecha de un posible evento cardíaco. A estos se les pidió información sobre sus habitos, salud y antecedentes familiares.</p>
+<div id="duración-del-dolor-y-evento" class="section level3 unnumbered">
+<h3>Duración del Dolor y Evento</h3>
+<p><img src="Eventos-Cardiacos_files/figure-html/duracion-1.png" width="50%" /></p>
+<p>De los pacientes que tuvieron un dolor que se extendió temporalmente <strong>menos de un minuto, casi ninguno de ellos sufrió un evento cardiovascular</strong>. Cuando el dolor persiste por más de un minuto el riesgo de tener un evento incrementa de forma significativa. Comparando los pacientes con dolor <strong>mayor a 20 minutos</strong> que no sufrieron un evento cardiovascular con los que sufrieron el evento, <strong>notamos que gran parte de estos no sufren un evento cardíaco comparados a los que sí sufren un evento</strong>.</p>
+</div>
+<div id="obesidad-y-grasas-en-sangre" class="section level3 unnumbered">
+<h3>Obesidad y Grasas en Sangre</h3>
+<p><img src="Eventos-Cardiacos_files/figure-html/obesidad-1.png" /><!-- --></p>
+<p>Este gráfico evalúa la relación de las grasas en sangre con la obesidad. El eje “y” representa la cantidad unitaria de pacientes. La mayoría de los pacientes que se recibieron no son obesos y no tienen lípidos en sangre. Podemos notar que de los pacientes que tienen lípidos en sangre son similares las cantidades que tienen o no tienen obesidad. <strong>Dentro de los pacientes obesos, una mayor cantidad tiene dislipemia</strong>.</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>Consideramos que la relación de la obesidad con el factor de riesgo cardiovascular dislipemia no es relevante en los datos analizados. Analizaremos a continuación la <strong>cantidad de episodios que sufrieron los pacientes internados que tenían dislipemia</strong>.</p>
+<p><img src="Eventos-Cardiacos_files/figure-html/obesidad2-1.png" /><!-- --></p>
+<p>Este gráfico muestra los pacientes con dislipemia que sufrieron uno o más eventos cardiovasculares. El eje “y” representa la proporción de pacientes que sufrieron un evento sobre su totalidad. Notamos que de los <strong>pacientes con dislipemia, más de un 60% sufrió más de un episodio cardiovascular</strong>. Lo cual muestra que los pacientes con dislipemia que ya tuvieron un evento cardiovascular tienen muchas probabilidades de sufrir otro.</p>
+</div>
+<div id="síndrome-anginoso-y-fumar" class="section level3 unnumbered">
+<h3>Síndrome Anginoso y Fumar</h3>
+<p><img src="Eventos-Cardiacos_files/figure-html/Sme-1.png" /><!-- --></p>
+<p>El gráfico separa los pacientes que fuman de los que no fuman y muestra la cantidad unitaria que sufre de síndrome anginoso. Podemos notar que <strong>de las personas que fuman, menos de la mitad sufre de síndrome anginoso</strong>. Sin embargo, de los pacientes que <strong>no sufren el síndrome, la mayoría no fuma</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+    <div class="col-md-2">
+            <div id="toc">
+      	<button type="button" class="close">×</button>
+        <ul>
+        <li><a href="#introducción">Introducción</a></li>
+        <li><a href="#análisis">Análisis</a><ul>
+        <li><a href="#pacientes-que-sufrieron-un-evento-cardiovascular">Pacientes que sufrieron un evento cardiovascular</a></li>
+        <li><a href="#pacientes-atendidos-en-la-guardia-con-posible-evento-cardiovascular">Pacientes atendidos en la guardia con posible evento cardiovascular</a></li>
+        </ul></li>
+        </ul>
+      </div>
+          </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function () {
+
+  // add bootstrap table styles to pandoc tables
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+
+});
+</script>
+
+<script>
+$(document).ready(function () {
+ 	 	$('#content img')
+ 	  .addClass("image-thumb");
+      $('#content img')
+ 	  .addClass("image-lb");
+  $('#content').magnificPopup({
+	      type:'image',
+	      closeOnContentClick: false,
+	      closeBtnInside: false,
+	      delegate: 'img',
+	      gallery: {enabled: false },
+	      image: {
+	        verticalFit: true,
+          titleSrc: 'alt'
+	      }
+ 	    });
+ 	});
+</script>
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
