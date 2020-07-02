@@ -8,9 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
-<meta name="author" content="Autores: Catalina Mendizabal, Josefina Arcagni, Lucía Khabie y Bahía Elverdin" />
 
-<meta name="date" content="2020-06-24" />
+<meta name="date" content="2020-07-01" />
 
 <title>Predicción de Eventos Cardíacos</title>
 
@@ -25,7 +24,6 @@
 <script src="site_libs/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
 <link href="site_libs/clean-0.1/clean.css" rel="stylesheet" />
 <script src="site_libs/clean-0.1/clean.js"></script>
-<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 
@@ -67,49 +65,47 @@ img {
 
 <div id="header">
 <h1 class="title">Predicción de Eventos Cardíacos</h1>
-<h4 class="author"><em>Autores: Catalina Mendizabal, Josefina Arcagni, Lucía Khabie y Bahía Elverdin</em></h4>
-<h4 class="date"><em>2020-06-24</em></h4>
+<h4 class="author"><em><strong>Autores</strong>:
+</p>
+Catalina Mendizabal (<a href="mailto:catalina.mendizabal@ing.austral.edu.ar" class="email">catalina.mendizabal@ing.austral.edu.ar</a>)
+</p>
+Josefina Arcagni (<a href="mailto:josefina.arcagni@ing.austral.edu.ar" class="email">josefina.arcagni@ing.austral.edu.ar</a>)
+</p>
+Lucía Khabie (<a href="mailto:lucia.khabie@ing.austral.edu.ar" class="email">lucia.khabie@ing.austral.edu.ar</a>)
+</p>
+Bahía Elverdin (<a href="mailto:bahia.elverdin@ing.austral.edu.ar" class="email">bahia.elverdin@ing.austral.edu.ar</a>)</em></h4>
+<h4 class="date"><em>2020-07-01</em></h4>
 </div>
 
 <div id="content">
 <div id="introducción" class="section level1 unnumbered">
 <h1>Introducción</h1>
-<p>       Hemos realizado un análisis de la prevalencia de los factores de riesgo como elementos esenciales para la decisión sobre tipo de tratamiento hospitalario de los eventos cardiovasculares.</p>
-<p>       Utilizamos como base para este análisis un dataset conteniendo los datos ya curados de internación de 1000 pacientes del Hospital Universitario Austral.</p>
-<p>       Nuestro estudio se divide en dos partes; la primera partiendo de los pacientes que sufrieron un evento cardiovascular, y la segunda parte considera a todos los pacientes admitidos a la guardia.</p>
+Hemos realizado un análisis de la prevalencia de los factores de riesgo como elementos esenciales para la decisión sobre tipo de tratamiento hospitalario de los eventos cardiovasculares.
+</p>
+Utilizamos como base para este análisis un dataset conteniendo los datos ya curados de internación de 1000 pacientes del Hospital Universitario Austral.
+</p>
+<p>Nuestro estudio se divide en dos partes; la primera partiendo de los pacientes que sufrieron un evento cardiovascular, y la segunda parte considera a todos los pacientes admitidos a la guardia.</p>
 </div>
 <div id="análisis" class="section level1 unnumbered">
 <h1>Análisis</h1>
 <div id="pacientes-que-sufrieron-un-evento-cardiovascular" class="section level2 unnumbered">
 <h2>Pacientes que sufrieron un evento cardiovascular</h2>
-<p>       Un evento cardíaco se refiere a todo tipo de <strong>eventos coronarios</strong> de diversas etiologías. Todos los pacientes que tuvieron eventos coronarios tienen una <strong>edad superior a los 30 años</strong>. De los 121 pacientes que sufrieron un evento cardíaco <strong>97 son hombres y 24 son mujeres</strong>.</p>
-<table class="table table-striped" style="width: auto !important; ">
+<p>Un evento cardíaco se refiere a todo tipo de <strong>eventos coronarios</strong> de diversas etiologías. Todos los pacientes que tuvieron eventos coronarios tienen una <strong>edad superior a los 30 años</strong>. De los 121 pacientes que sufrieron un evento cardíaco <strong>97 son hombres y 24 son mujeres</strong>.</p>
+<table>
 <thead>
-<tr>
-<th style="text-align:left;">
-Evento
-</th>
-<th style="text-align:right;">
-Cantidad
-</th>
+<tr class="header">
+<th>Evento</th>
+<th>Cantidad</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-0
-</td>
-<td style="text-align:right;">
-881
-</td>
+<tr class="odd">
+<td>Sin</td>
+<td>881</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-1
-</td>
-<td style="text-align:right;">
-121
-</td>
+<tr class="even">
+<td>Con</td>
+<td>121</td>
 </tr>
 </tbody>
 </table>
@@ -169,9 +165,6 @@ Cantidad
 <p>
  
 </p>
-<p>
- 
-</p>
 <p>Consideramos que la relación de la obesidad con el factor de riesgo cardiovascular dislipemia no es relevante en los datos analizados. Analizaremos a continuación la <strong>cantidad de episodios que sufrieron los pacientes internados que tenían dislipemia</strong>.</p>
 <p><img src="index_files/figure-html/obesidad2-1.png" /><!-- --></p>
 <p>Este gráfico muestra los pacientes con dislipemia que sufrieron uno o más eventos cardiovasculares. El eje “y” representa la proporción de pacientes que sufrieron un evento sobre su totalidad. Notamos que de los <strong>pacientes con dislipemia, más de un 60% sufrió más de un episodio cardiovascular</strong>. Lo cual muestra que los pacientes con dislipemia que ya tuvieron un evento cardiovascular tienen muchas probabilidades de sufrir otro.</p>
@@ -181,6 +174,135 @@ Cantidad
 <p><img src="index_files/figure-html/Sme-1.png" /><!-- --></p>
 <p>El gráfico separa los pacientes que fuman de los que no fuman y muestra la cantidad unitaria que sufre de síndrome anginoso. Podemos notar que <strong>de las personas que fuman, menos de la mitad sufre de síndrome anginoso</strong>. Sin embargo, de los pacientes que <strong>no sufren el síndrome, la mayoría no fuma</strong>.</p>
 </div>
+</div>
+</div>
+<div id="predicción" class="section level1 unnumbered">
+<h1>Predicción</h1>
+<p>Desarrollamos modelos de predicción considerando el análisis de relevancia de los factores de riesgo realizados.</p>
+<div id="selección" class="section level2 unnumbered">
+<h2>Selección de variables</h2>
+<p>La base de datos utilizada contaba con los siguientes datos de cada paciente:</p>
+<ul>
+<li>Género</li>
+<li>Edad</li>
+<li>Síntomas Asociados (SA)</li>
+<li>Síndome Anginoso (SmeA)</li>
+<li>Cantidad de episodios (CantE)</li>
+<li>Modifica respiración posición (MR)</li>
+<li>Reproduce palpación (RP)</li>
+<li>Duración del dolor (DD)</li>
+<li>Características del dolor (CD)</li>
+<li>Ubicación del dolor (UD)</li>
+<li>Mismo dolor evento previo (MDEP)</li>
+<li>SCA previo o historia de revascularización (SCApHR)</li>
+<li>Presenta dolor actual (PDA)</li>
+<li>Presenta hipertensión arterial (HTA)</li>
+<li>Es diabético (DBT)</li>
+<li>Tiene alteración en los niveles de lípidos (grasas) en sangre (DLP)</li>
+<li>Fuma (TBQ)</li>
+<li>Es obesa/o (OBES)</li>
+<li>Tiene antecedentes familiares (AHF)</li>
+</ul>
+<p>El siguente gráfico muestra las correlaciones entre las variables. Cuando el resultado de una correlación es “1” ambas variables están exactamente correladas (se muestran en tono azul), cuando es “-1” están exactamente anti-correladas (se muestran en tono rosa) y tiene como valor “0” cuando no hay correlación (se muestran en blanco).</p>
+<p><img src="index_files/figure-html/cor-1.png" /><!-- --></p>
+<p>Usamos el método StepWise para la selección de variables. Este es un grupo de algoritmos que comienza con un modelo vacío y agrega de a una variable, seleccionando la que mejora el modelo de manera más significativa.</p>
+<p>Las variables seleccionadas fueron:</p>
+<ul>
+<li>Edad</li>
+<li>AHF</li>
+<li>Género</li>
+<li>OBES</li>
+<li>SmeA</li>
+<li>DBT</li>
+<li>MR</li>
+<li>UD</li>
+<li>TBQ</li>
+<li>MDEP</li>
+</ul>
+<p>Decidimos hacer dos modelos de predicción de evento cardíaco. Las variables utilizadas en el <a href="#pm">primer modelo</a> fueron Edad, Género, OBES, SmeA, DBT, UD, TBQ. Estas son las variables que consideramos importantes según nuestro <a href="#análisis">análisis</a> de los datos. En el <a href="#sm">segundo modelo</a> agregamos a nuestras variables AHF. Según nuestro análisis una minoría de pacientes con evento tenían antecedentes familiares, sin embargo al usar el método <a href="#selección">StepWise</a> fue seleccionada como una variable de importancia.</p>
+</div>
+<div id="pm" class="section level2 unnumbered">
+<h2>Modelo 1: sin AHF</h2>
+<p><img src="index_files/figure-html/box1-1.png" /><!-- --></p>
+<p>El gráfico muestra la probabilidad de predecir si el paciente tuvo el evento. A la izquierda muestra el boxplot de los que no tuvieron el evento, y a la derecha los que si tuvieron el evento.</p>
+<div id="tabla-de-confusión" class="section level3 unnumbered">
+<h3>Tabla de Confusión</h3>
+<p>La siguiente tabla compara los pacientes que tuvieron o no evento con aquellos que el modelo 1 predijo que tendrían o no un evento.</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Sin Evento</th>
+<th>Con Evento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No Predice Evento</td>
+<td>223</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>Predice Evento</td>
+<td>43</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<p>Del total de las predicciones realizadas por este modelo <strong>81%</strong> son correctas.</p>
+</div>
+<div id="curva-auroc" class="section level3 unnumbered">
+<h3>Curva AUROC</h3>
+La curva AUROC mide la presición del modelo usando la matriz de confusión.
+<p>
+ 
+</p>
+<p><img src="index_files/figure-html/auroc1-1.png" /><!-- --></p>
+</div>
+</div>
+<div id="sm" class="section level2 unnumbered">
+<h2>Modelo 2: con AHF</h2>
+<p>El modelo 2 utiliza las mismas variables que el modelo 1 más el AHF(antecedentes familiares) para predecir si el paciente tuvo un evento.</p>
+<p><img src="index_files/figure-html/box2-1.png" /><!-- --></p>
+<p>El gráfico muestra la probabilidad de predecir si el paciente tuvo el evento. A la izquierda muestra el boxplot de los que no tuvieron el evento, y a la derecha los que si tuvieron el evento. (con las variable anteriores y el AHF)</p>
+<div id="tabla-de-confusión-1" class="section level3 unnumbered">
+<h3>Tabla de Confusión</h3>
+<p>La siguiente tabla compara los pacientes que tuvieron o no evento con aquellos que el modelo 1 predijo que tendrían o no un evento.</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Sin Evento</th>
+<th>Con Evento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No Predice Evento</td>
+<td>225</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>Predice Evento</td>
+<td>41</td>
+<td>23</td>
+</tr>
+</tbody>
+</table>
+<p>Del total de las predicciones realizadas por este modelo <strong>82%</strong> son correctas.</p>
+</div>
+<div id="curva-auroc-1" class="section level3 unnumbered">
+<h3>Curva AUROC</h3>
+La curva AUROC mide la presición del modelo usando la matriz de confusión.
+<p>
+ 
+</p>
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" /><!-- --></p>
+</div>
+</div>
+<div id="conclusión" class="section level2 unnumbered">
+<h2>Conclusión</h2>
+<p>En conclusión de los dos modelos generados el mejor predictor es el <a href="#sm">segundo modelo</a>; este tiene el valor AUROC más alto de ambos.</p>
 </div>
 </div>
 </div>
@@ -195,6 +317,12 @@ Cantidad
         <li><a href="#análisis">Análisis</a><ul>
         <li><a href="#pacientes-que-sufrieron-un-evento-cardiovascular">Pacientes que sufrieron un evento cardiovascular</a></li>
         <li><a href="#pacientes-atendidos-en-la-guardia-con-posible-evento-cardiovascular">Pacientes atendidos en la guardia con posible evento cardiovascular</a></li>
+        </ul></li>
+        <li><a href="#predicción">Predicción</a><ul>
+        <li><a href="#selección">Selección de variables</a></li>
+        <li><a href="#pm">Modelo 1: sin AHF</a></li>
+        <li><a href="#sm">Modelo 2: con AHF</a></li>
+        <li><a href="#conclusión">Conclusión</a></li>
         </ul></li>
         </ul>
       </div>
