@@ -224,6 +224,85 @@ Utilizamos como base para este análisis un dataset conteniendo los datos ya cur
 <div id="pm" class="section level2 unnumbered">
 <h2>Modelo 1: sin AHF</h2>
 <p><img src="index_files/figure-html/box1-1.png" /><!-- --></p>
+<p>El gráfico muestra la probabilidad de predecir si el paciente tuvo el evento. A la izquierda muestra el boxplot de los que no tuvieron el evento, y a la derecha los que si tuvieron el evento.</p>
+<div id="tabla-de-confusión" class="section level3 unnumbered">
+<h3>Tabla de Confusión</h3>
+<p>La siguiente tabla compara los pacientes que tuvieron o no evento con aquellos que el modelo 1 predijo que tendrían o no un evento.</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Sin Evento</th>
+<th>Con Evento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No Predice Evento</td>
+<td>223</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>Predice Evento</td>
+<td>43</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<p>Del total de las predicciones realizadas por este modelo <strong>81%</strong> son correctas.</p>
+</div>
+<div id="curva-auroc" class="section level3 unnumbered">
+<h3>Curva AUROC</h3>
+La curva AUROC mide la presición del modelo usando la matriz de confusión.
+<p>
+ 
+</p>
+<p><img src="index_files/figure-html/auroc1-1.png" /><!-- --></p>
+</div>
+</div>
+<div id="sm" class="section level2 unnumbered">
+<h2>Modelo 2: con AHF</h2>
+<p>El modelo 2 utiliza las mismas variables que el modelo 1 más el AHF(antecedentes familiares) para predecir si el paciente tuvo un evento.</p>
+<p><img src="index_files/figure-html/box2-1.png" /><!-- --></p>
+<p>El gráfico muestra la probabilidad de predecir si el paciente tuvo el evento. A la izquierda muestra el boxplot de los que no tuvieron el evento, y a la derecha los que si tuvieron el evento. (con las variable anteriores y el AHF)</p>
+<div id="tabla-de-confusión-1" class="section level3 unnumbered">
+<h3>Tabla de Confusión</h3>
+<p>La siguiente tabla compara los pacientes que tuvieron o no evento con aquellos que el modelo 1 predijo que tendrían o no un evento.</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Sin Evento</th>
+<th>Con Evento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No Predice Evento</td>
+<td>225</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>Predice Evento</td>
+<td>41</td>
+<td>23</td>
+</tr>
+</tbody>
+</table>
+<p>Del total de las predicciones realizadas por este modelo <strong>82%</strong> son correctas.</p>
+</div>
+<div id="curva-auroc-1" class="section level3 unnumbered">
+<h3>Curva AUROC</h3>
+La curva AUROC mide la presición del modelo usando la matriz de confusión.
+<p>
+ 
+</p>
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" /><!-- --></p>
+</div>
+</div>
+<div id="conclusión" class="section level2 unnumbered">
+<h2>Conclusión</h2>
+<p>En conclusión de los dos modelos generados el mejor predictor es el <a href="#sm">segundo modelo</a>; este tiene el valor AUROC más alto de ambos.</p>
 </div>
 </div>
 </div>
@@ -242,6 +321,8 @@ Utilizamos como base para este análisis un dataset conteniendo los datos ya cur
         <li><a href="#predicción">Predicción</a><ul>
         <li><a href="#selección">Selección de variables</a></li>
         <li><a href="#pm">Modelo 1: sin AHF</a></li>
+        <li><a href="#sm">Modelo 2: con AHF</a></li>
+        <li><a href="#conclusión">Conclusión</a></li>
         </ul></li>
         </ul>
       </div>
